@@ -33,12 +33,15 @@ class NidaController extends Controller
 				"msisdn" => $phone
 			]);
 
-            error_log("After response");
+            error_log("After response: ");
+            error_log($response);
             $bod = $response->json($key = null);
+            error_log("Response is ");
+            // error_log($bod);
             $dat = $bod["data"];
             $pinId = $dat["pinId"];
             
-            
+            error_log("pin id is");
 
             error_log($pinId);
 
